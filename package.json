@@ -2,7 +2,11 @@
   "name": "painter",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "watch": "yarn nx serve painter",
+    "watch:api": "yarn nx serve painter-api",
+    "build:database": "docker-compose -f ./tools/dev/docker-compose.yml up -d"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.0.0",
@@ -35,6 +39,7 @@
     "@angular/language-service": "~16.0.0",
     "@nestjs/schematics": "^9.1.0",
     "@nestjs/testing": "^9.1.1",
+    "@nestjs/typeorm": "^9.0.1",
     "@nx/cypress": "16.1.1",
     "@nx/eslint-plugin": "16.1.1",
     "@nx/jest": "16.1.1",
@@ -65,6 +70,7 @@
     "tailwindcss": "^3.0.2",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
+    "typeorm": "^0.3.15",
     "typescript": "~5.0.2"
   }
 }
